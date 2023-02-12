@@ -9,7 +9,7 @@ import pages.YouTubePage;
 public class YouTubeTests extends BaseTest {
 
 
-    private final Logger logger = Logger.getLogger(YouTubeTests.class);
+    private final Logger log = Logger.getLogger(YouTubeTests.class);
     @Test (priority = 0)
     public void invalidLoginTest_InvalidUserNameInvalidPassword () throws InterruptedException {
         //*************PAGE METHODS WITH JAVA GENERICS********************
@@ -37,10 +37,13 @@ public class YouTubeTests extends BaseTest {
             page.GetInstance(YouTubePage.class)
                     .clickOnViewCount();
         }
-        page.GetInstance(YouTubePage.class)
-                .clickOnViewCount();
+
         page.GetInstance(YouTubePage.class)
                 .goToIWillSurviveSong();
+        page.GetInstance(SongPage.class)
+                .skipOnAds();
+        page.GetInstance(SongPage.class)
+                .skipOnAds();
         String publisher = page.GetInstance(SongPage.class)
                 .getThePublisherOfSong();
         log.info("The name of the publisher is: "+ publisher);

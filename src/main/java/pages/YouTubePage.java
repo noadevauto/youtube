@@ -1,5 +1,6 @@
 package pages;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,6 +11,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 
 public class YouTubePage extends BasePage {
+
+    public static Logger log = Logger.getLogger(YouTubePage.class.getName());
 
     //*********Constructor*********
     public YouTubePage(WebDriver driver) {
