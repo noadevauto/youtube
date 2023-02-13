@@ -55,7 +55,7 @@ public class SongPage  extends BasePage{
             }
         }
         catch(TimeoutException exception){
-
+            log.info("No Ads on the song");
         }
 
 
